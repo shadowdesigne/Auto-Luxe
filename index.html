@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- وسوم الميتا الأساسية -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Auto Luxe - روابط التواصل الرسمية" />
+    <meta name="keywords" content="Auto Luxe, سيارات, فاخرة, خدمات" />
+
+    <!-- وسوم Open Graph -->
+    <meta property="og:title" content="Auto Luxe" />
+    <meta property="og:description" content="روابط التواصل الرسمية لـ Auto Luxe" />
+    <meta property="og:image" content="logo.png" />
+    <meta property="og:type" content="website" />
+
+    <title>Auto Luxe</title>
+
+    <!-- الخطوط والأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <style>
+        /* إعادة تعيين القيم الأساسية */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #ffffff;
+            color: #103D70; /* لون النصوص الرئيسي */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding: 20px;
+        }
+
+        /* قسم الشعار */
+        .logo-section {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto 10px auto;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .logo-section img {
+            max-width: 100%;
+            height: auto;
+            max-height: 220px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(16, 61, 112, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-section img:hover {
+            transform: scale(1.02);
+        }
+
+        /* عنوان العلامة */
+        .brand-title {
+            text-align: center;
+            margin: 10px 0 30px 0;
+            padding: 0 20px;
+        }
+
+        .brand-title h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #103D70;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .brand-title h1::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background: #74A3E4;
+            margin: 8px auto 0;
+            border-radius: 10px;
+        }
+
+        /* حاوية الروابط */
+        .links-grid {
+            width: 100%;
+            max-width: 700px;
+            padding: 10px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* تصميم كل رابط */
+        .link-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px 28px;
+            background-color: #ffffff;
+            border: 2px solid #e6ecf5;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #103D70;
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(16, 61, 112, 0.04);
+        }
+
+        .link-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 6px;
+            background: #74A3E4;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .link-item:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: #74A3E4;
+            box-shadow: 0 12px 30px rgba(116, 163, 228, 0.15);
+            background: #fafcff;
+        }
+
+        .link-item:hover::before {
+            opacity: 1;
+        }
+
+        /* الأيقونات */
+        .link-item i {
+            font-size: 2.2rem;
+            width: 50px;
+            text-align: center;
+            color: #74A3E4; /* لون الأيقونات */
+            transition: transform 0.3s ease;
+        }
+
+        .link-item:hover i {
+            transform: scale(1.15) rotate(-3deg);
+        }
+
+        .link-item .link-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-right: 20px;
+            flex-grow: 1;
+            letter-spacing: 0.5px;
+            color: #103D70;
+        }
+
+        .link-item .link-sub {
+            font-size: 0.9rem;
+            color: #5a7a9a;
+            font-weight: 400;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .link-item .arrow-icon {
+            color: #74A3E4;
+            font-size: 1.2rem;
+            opacity: 0.4;
+            transition: all 0.3s ease;
+        }
+
+        .link-item:hover .arrow-icon {
+            opacity: 1;
+            transform: translateX(-8px);
+        }
+
+        /* عبارة "للاحتياجات والشكاوي" فوق الرقم والواتساب */
+        .note-above-contact {
+            text-align: center;
+            margin-bottom: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #103D70;
+            letter-spacing: 0.5px;
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0 10px 0;
+            border-top: 1px solid #eef3f9;
+            margin-top: auto;
+            font-size: 0.95rem;
+            color: #5a7a9a;
+        }
+
+        footer a {
+            color: #103D70;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #74A3E4;
+            text-decoration: underline;
+        }
+
+        /* التجاوب مع الجوال */
+        @media (max-width: 768px) {
+            .logo-section img {
+                max-height: 160px;
+            }
+            .brand-title h1 {
+                font-size: 1.8rem;
+            }
+            .link-item {
+                padding: 16px 20px;
+                border-radius: 14px;
+            }
+            .link-item i {
+                font-size: 1.8rem;
+                width: 40px;
+            }
+            .link-item .link-text {
+                font-size: 1.1rem;
+                margin-right: 15px;
+            }
+            .links-grid {
+                padding: 10px;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-section img {
+                max-height: 130px;
+            }
+            .brand-title h1 {
+                font-size: 1.5rem;
+            }
+            .link-item .link-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- قسم الشعار (العلوي) -->
+    <section class="logo-section">
+        <!-- يتم تحميل الشعار من ملف logo.png -->
+        <img src="logo.png" alt="شعار Auto Luxe"
+             onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\'display:flex; justify-content:center; align-items:center; height:200px; color:#74A3E4; font-size:1.5rem; font-weight:bold;\'>📌 ضع شعار logo.png هنا</div>'" />
+    </section>
+
+    <!-- عنوان العلامة -->
+    <div class="brand-title">
+        <h1>Auto Luxe</h1>
+    </div>
+
+    <!-- شبكة الروابط (البيانات الجديدة) -->
+    <main class="links-grid">
+
+        <!-- رابط خرائط جوجل (الجديد) -->
+        <a href="https://maps.app.goo.gl/UA2ahpiyRbeQVgt58?g_st=iw" target="_blank" class="link-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="link-text">
+                موقعنا على الخريطة
+                <span class="link-sub">العنوان الدقيق عبر خرائط جوجل</span>
+            </div>
+            <i class="fas fa-chevron-left arrow-icon"></i>
+        </a>
+
+        <!-- قسم الاتصال: عبارة + واتساب + رقم الهاتف -->
+        <div class="note-above-contact">للاحتياجات والشكاوي</div>
+
+        <!-- رابط واتساب -->
+        <a href="https://wa.me/966557709486?text=مرحباً%20Auto%20Luxe" target="_blank" class="link-item" style="margin-top: -8px;">
+            <i class="fab fa-whatsapp"></i>
+            <div class="link-text">
+                واتساب
+                <span class="link-sub">تواصل معنا عبر واتساب</span>
+            </div>
+            <i class="fas fa-chevron-left arrow-icon"></i>
+        </a>
+
+        <!-- رابط اتصال مباشر (رقم الهاتف) -->
+        <a href="tel:0557709486" class="link-item">
+            <i class="fas fa-phone-alt"></i>
+            <div class="link-text">
+                055 770 9486
+                <span class="link-sub">اتصل بنا مباشرة</span>
+            </div>
+            <i class="fas fa-chevron-left arrow-icon"></i>
+        </a>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <p>
+            تصميم وتطوير
+            <a href="https://shadowdesigner.net/" target="_blank">
+                شدو ديزاين
+            </a>
+            &nbsp;&copy; 2026
+        </p>
+    </footer>
+
+</body>
+</html>
